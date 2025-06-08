@@ -1,0 +1,198 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* KPI Cards */
+.kpi-card {
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.kpi-icon.blue {
+  background-color: #3b82f6;
+}
+
+.kpi-icon.green {
+  background-color: #10b981;
+}
+
+.kpi-icon.orange {
+  background-color: #f59e0b;
+}
+
+.kpi-icon.purple {
+  background-color: #8b5cf6;
+}
+
+.kpi-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.kpi-change.up {
+  color: #059669;
+  background-color: #d1fae5;
+}
+
+.kpi-change.down {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.kpi-content h3 {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.kpi-content p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Charts */
+.chart-container {
+  margin-top: 20px;
+}
+
+.chart-container h3 {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Table */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.data-table td {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.data-table tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Status badges */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.processing {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status.shipped {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status.cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+  
+  .dashboard-header p {
+    font-size: 14px;
+  }
+  
+  .kpi-card {
+    padding: 16px;
+  }
+  
+  .kpi-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .kpi-content h3 {
+    font-size: 20px;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+}

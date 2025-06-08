@@ -1,0 +1,253 @@
+.tables-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* Table Controls */
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container svg {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary);
+  z-index: 1;
+}
+
+.search-input {
+  width: 300px;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* Data Table */
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.data-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.data-table th.sortable:hover {
+  background-color: var(--border-color);
+}
+
+.data-table td {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.data-table tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Customer Info */
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.customer-info strong {
+  font-weight: 600;
+}
+
+.customer-info small {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Status badges */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.action-btn.view {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.action-btn.view:hover {
+  background-color: #bfdbfe;
+}
+
+.action-btn.edit {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.action-btn.edit:hover {
+  background-color: #fde68a;
+}
+
+.action-btn.delete {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.action-btn.delete:hover {
+  background-color: #fecaca;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.pagination-info {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-controls .btn {
+  min-width: 40px;
+  height: 36px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.pagination-controls .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .controls-left,
+  .controls-right {
+    justify-content: space-between;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .pagination-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
